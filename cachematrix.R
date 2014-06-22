@@ -32,9 +32,9 @@ cacheSolve <- function(x, ...) {
     message("cached")
     return(inv)
   }
+  message("not cached yet")
   data <- x$get()
   inv <- solve(data)
   x$setinverse(inv)
-  message("not cached yet")
   inv
 }
